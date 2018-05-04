@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser'); 
-const knex = require('./knexfile.js')
+const knex = require('./knex/knex.js');
 const routes = require('./routes');
 
 const app = express();

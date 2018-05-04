@@ -5,7 +5,7 @@ const users = require('./users.js');
 
 const router = express.Router();
 
-router.use('/cart', cart);
+// router.use('/cart', cart);
 router.use('/products', products); 
 router.use('/users', users);
 
