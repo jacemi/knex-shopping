@@ -1,14 +1,18 @@
--- DROP USER IF EXISTS jacemi;
--- DROP DATABASE IF EXISTS knex_shopping;
+DROP DATABASE IF EXISTS knex_shopping;
+DROP USER IF EXISTS jacemi;
 
--- CREATE USER jacemi;
--- CREATE DATABASE knex_shopping WITH OWNER jacemi;
+CREATE USER jacemi;
+CREATE DATABASE knex_shopping WITH OWNER jacemi;
+
+\c knex_shopping jacemi
+
 
 DROP TABLE IF EXISTS cart;
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS products;
 
-CREATE TABLE users (
+
+CREATE TABLE users(
   id SERIAL PRIMARY KEY,
   email varchar(225) UNIQUE,
   password varchar(225),
@@ -33,6 +37,7 @@ CREATE TABLE cart(
   created_at timestamp DEFAULT now(),
   updated_at timestamp DEFAULT now()
 );
+
 
 INSERT INTO users(email, password)
 VALUES ('email@email.com', 'password');

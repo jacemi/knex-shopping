@@ -6,7 +6,7 @@ const routes = require('./routes');
 const app = express();
 const PORT = process.env.PORT || 3000; 
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use('/', routes);
