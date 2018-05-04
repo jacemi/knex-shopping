@@ -25,7 +25,7 @@ CREATE TABLE products(
   title varchar(225),
   description text,
   inventory integer,
-  price decimal(8, 2), --use money
+  price money, --use money
   created_at timestamp DEFAULT now(),
   updated_at timestamp DEFAULT now()
 );
